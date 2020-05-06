@@ -1,0 +1,31 @@
+
+#close-CSS{
+  background: url('./calendarBtn.PNG')no-repeat scroll 0 0 transparent;
+  background-size: 20px 20px ;
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  margin-left: -1.8em;
+
+}
+
+.form-group{
+  margin-left: 6em;
+}
+.dropdown{
+  display: inline-block;
+  /* box-shadow: 0px 8px 16px 0px rgba(253, 0, 0, 0.2); */
+}
+
+.input-group-append{
+  margin-left: 1.5em;
+}
+
+
+
+
+
+
+
+
+

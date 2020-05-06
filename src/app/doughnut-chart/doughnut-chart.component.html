@@ -1,0 +1,22 @@
+<div class="chart-wrapper" *ngIf="doughnutChartData">
+  <canvas baseChart width="130" height="240"
+   
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [options]="doughnutChartOptions"
+    [chartType]="doughnutChartType"
+    legend="true">
+  </canvas>
+</div>
+
+<div class="barchart-wrapper" *ngIf="barChartData">
+  <canvas baseChart width="130" height="390"
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType"
+    legend="true">
+  </canvas>
+</div>

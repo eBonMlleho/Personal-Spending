@@ -1,0 +1,230 @@
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+/* I am trying this from w3 school https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns*/
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 30px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<h3>Report</h3>
+
+
+<!--date picker-->
+<!--add new transaction date input -->
+<button mat-stroked-button type="button" style="display: inline-block; margin-left: 1em;" class="button" (click)="onDateChange()">
+Report a different date</button>
+<br>
+<div style="display: inline-block; margin-left: 1em;">  
+      <form >
+        <input placeholder={{currentDate}} name="dp" [(ngModel)]="model" [(ngModel)]="currentDate" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append" style="display: inline-block;">
+          <button (click)="d.toggle()" type="button" id="close-CSS"></button>
+        </div>
+      </form>
+</div>
+    
+
+
+<!--end date picker-->
+
+<!--summery-->
+ <br><br><br>
+
+  <div style="display: inline-block;margin-left: 16em;background-color: rgb(220, 220, 200);" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Spending this Year  </label>
+      ${{yearSpending}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+      <label>Spending this Month </label>
+      ${{monthSpending}}
+      <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+
+  <div style="display: inline-block;margin-left: 16em;background-color: rgb(220, 220, 220);" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Increase from last Year  </label>
+      ${{yearDifference}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+      <label>Increase from last Month </label>
+      ${{monthDifference}}
+      <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+
+  <!-- -->
+  <div style="display: inline-block;margin-left: 16em;" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Shopping this Month </label>
+      ${{monthSpendingShopping}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+      <label>Rent this Month </label>
+      ${{monthSpendingRent}}
+      <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+
+
+  <!-- -->
+  <div style="display: inline-block;margin-left: 16em;" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Gas this Month </label>
+      ${{monthSpendingGas}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+      <label>Dining this Month </label>
+      ${{monthSpendingDinning}}
+      <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+  <!-- -->
+
+
+  <div style="display: inline-block;margin-left: 16em;" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Travel this Month </label>
+      ${{monthSpendingTravel}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+      <label>Entertainment this Month</label>
+      ${{monthSpendingEntertainment}}
+      <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+  <!-- -->
+
+
+  <div style="display: inline-block;margin-left: 16em;" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Education this Month  </label>
+      ${{monthSpendingEducation}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+    
+      <label>Transportation this Month</label>
+      ${{monthSpendingTransportation}}
+     <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+  <!-- -->
+
+    <div style="display: inline-block;margin-left: 16em;" class="row">
+    <div style="display: inline-block; "class="column">
+      <label>Bills this Month  </label>
+      ${{monthSpendingBills}}
+      <br>____________________________________________________
+    </div>
+
+    <!-- -->
+    <div style="display: inline-block; "class="column">
+    
+      <label>Other Expences this Month</label>
+      ${{monthSpendingOther}}
+     <br>____________________________________________________
+    </div>
+  </div>
+  <br><br><br>
+  <!-- -->
+
+
+
+  <div style="background-color: rgb(200, 200, 200);" >
+  <br><br>
+  <div style="display: inline-block;">
+    <div style="display: inline-block; margin-left: 5em;">  
+      <label></label>
+      Predicted Spending Total this Year
+      <div><label></label> 
+          ${{prodiction}}
+      </div>
+    </div>
+
+    <!-- not in use -->
+    <div style="display: inline-block; margin-left: 5em;">  
+      <label></label>
+      <div></div>
+    </div>
+    <!-- not in use -->
+    <div style="display: inline-block; margin-left: 5em;">  
+      <label></label>
+      <div></div>
+    </div>
+  </div>
+  <br><br><br>
+</div> 
+
+
+
+
+
+
+
+<!--end summery-->
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Date of birth</label>
+          <div class="input-group">
+            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>

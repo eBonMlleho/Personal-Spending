@@ -1,0 +1,154 @@
+.transactions {
+    /* margin: 0 0 2em 0; */
+    list-style-type: none;
+    padding: 0;
+    width: 150em;
+    margin: auto;
+  }
+  .transactions li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .transactions li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  .transactions li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+
+  .transactions li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
+  .transactions .IDbadge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+    width: 9.5em;
+  }
+
+  .transactions .categorybadge {
+    /* padding: 0.8em 0.7em 0 0.7em; */
+    display: inline-block;
+    width: 200px;
+    border-radius: 50px 0 0 50px;
+
+
+
+
+  }
+
+  .transactions .amountbadge {
+    display: inline-block;
+    width: 150px;
+    padding-left: 0.5em;
+  }
+
+  .transactions .datebadge {
+    display: inline-block;
+    width: 150px;
+    padding-left: 3em;
+    /* background-color:#c2d32a; */
+  }
+
+  .transactions .notebadge {
+    display: inline-block;
+    width: 400px;
+    color: rgb(10, 2, 117);
+    padding-left: 8em;
+  }
+
+#close-CSS{
+  background: url('./calendarBtn.PNG')no-repeat scroll 0 0 transparent;
+  background-size: 20px 20px ;
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  margin-left: -1.8em;
+
+}
+
+.form-group{
+  margin-left: 6em;
+}
+.dropdown{
+  display: inline-block;
+  /* box-shadow: 0px 8px 16px 0px rgba(253, 0, 0, 0.2); */
+}
+
+.input-group-append{
+  margin-left: 1.5em;
+}
+.button {
+  background-color: rgb(12, 143, 82); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 6em;
+  /* display: inline-block; */
+  font-size: 16px;
+}
+.button2 {
+  background-color: rgb(195, 92, 243); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 6em;
+  font-size: 16px;
+  display: inline-block;
+  top: 100px;
+}
+
+/* date picker range */
+.custom-day {
+  
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.custom-day.focused {
+  background-color: #e2f8bf;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(135, 196, 250);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(127, 193, 250, 0.5);
+}
+
+.parent {
+  background-color: rgb(168, 209, 218);
+}
+
+
+
+
+
+
+
+

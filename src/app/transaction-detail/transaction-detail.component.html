@@ -1,0 +1,33 @@
+
+<div *ngIf="transaction">
+
+    <h2>ID:{{transaction.id}}  Transaction Details</h2>
+    <div>
+      <label><p  class = "align">Category:</p>
+        <input [(ngModel)]="transaction.category" placeholder=""/>
+      </label>
+    </div>
+    <br>
+    <div>
+        <label> <p  class = "align">Amount:</p>
+          <input [(ngModel)]="transaction.amount" placeholder=""/>
+        </label>
+    </div>
+    <br>
+    <div>
+        <label><p  class = "align">Date:</p>
+          <input [(ngModel)]="transaction.date" placeholder=""/>
+        </label>
+    </div>
+    <br>
+    <div>
+        <label><p  class = "align">Note:</p>
+          <input [(ngModel)]="transaction.note" placeholder=""/>
+        </label>
+    </div>
+    <br>
+ 
+  </div>
+
+
+   
